@@ -12,12 +12,25 @@ import {HistoryComponent} from './components/history/history.component';
 
 
 const routes: Routes = [
+  
+  {
+    path: '',
+    component: HomeComponent
+  },
   {
     path: 'home', component: HomeComponent,
+    children: [
+      {
+        path: 'video-home',
+        component: VideoHomeComponent
+      }
+    ]
   },
   {
-    path: 'video-home', component:VideoHomeComponent,
+    path: 'video-home',
+    component: VideoHomeComponent
   },
+ 
   {
     path: 'library' , component: LibraryComponent,
 
